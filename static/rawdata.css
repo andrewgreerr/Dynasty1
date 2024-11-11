@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FAF8F2;
+    color: #000;
+}
+
+header {
+    background-color: #8B0000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.teams h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.team-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 20px auto;
+    width: 600px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 160px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.raw-data-button {
+    margin-top: 20px;
+}
+
+.raw-data-button button {
+    background-color: #8B0000;
+    padding: 10px 40px;
+    font-size: 1rem;
+}

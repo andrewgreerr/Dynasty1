@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FAF8F2;
+    color: #000;
+}
+
+header {
+    background-color: #8B0000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.teams h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.team-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.function-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+    justify-content: center;
+    margin: 0px auto;
+    max-width: 275px;
+}
+
+ul{
+    font-size: 9px;
+    margin-top: 0px;
+}
+table {
+        width: 50%;
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+    th, td {
+        border: 1px solid #000000;
+        padding: 4px;
+        text-align: left;
+    }
+    th {
+        background-color: #8a8a8a;
+    }
+
+    tr:nth-child(even) {
+        background-color: #d4d4d4;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
