@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dye-Nasty League Salary Cap</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <script>
+        // Function to be executed when the page loads
+        function runPythonFunction() {
+            fetch('/run-function')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data.message); // Log the result to the console
+
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Failed to execute Python function.');
+                });
+        }
+
+        // Run the function when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', runPythonFunction);
+    </script>
+    <header>
+        <h1>DYE-NASTY LEAGUE SALARY CAP</h1>
+        <p>Select your name from below to see the breakdown of your team's salary cap.</p>
+    </header>
+
+    <main>
+        <section class="teams">
+            <h2><i><u><b>Teams</b></u></i></h2>
+            <div class="team-buttons">
+                <a href="{{ url_for('serve_other_files', filename='brian.html') }}"><button>Brian</button></a>
+                <a href="{{ url_for('serve_other_files', filename='briggs.html') }}"><button>Briggs</button></a>
+                <a href="{{ url_for('serve_other_files', filename='decker.html') }}"><button>Decker</button></a>
+                <a href="{{ url_for('serve_other_files', filename='donnelly.html') }}"><button>Donnelly</button></a>
+                <a href="{{ url_for('serve_other_files', filename='eric.html') }}"><button>Eric</button></a>
+                <a href="{{ url_for('serve_other_files', filename='gahan.html') }}"><button>Gahan</button></a>
+                <a href="{{ url_for('serve_other_files', filename='greer.html') }}"><button>Greer</button></a>
+                <a href="{{ url_for('serve_other_files', filename='greg.html') }}"><button>Greg</button></a>
+                <a href="{{ url_for('serve_other_files', filename='jackson.html') }}"><button>Jackson</button></a>
+                <a href="{{ url_for('serve_other_files', filename='julius.html') }}"><button>Julius</button></a>
+                <a href="{{ url_for('serve_other_files', filename='shapiro.html') }}"><button>Shapiro</button></a>
+                <a href="{{ url_for('serve_other_files', filename='trumbull.html') }}"><button>Trumbull</button></a>
+            </div>
+            <div class="raw-data-button">
+                <a href="{{ url_for('serve_other_files', filename='rawdata.html') }}"><button>Raw Data</button></a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
