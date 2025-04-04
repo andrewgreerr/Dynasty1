@@ -1,13 +1,14 @@
+# This file only needs to be run once per seaon to build the SQLITE3 database with the current year's player information
+
 import sqlite3
 import json
 
-
+# Connect to database (create if not pre-existing)
 def create_database():
-    """Create the database and table with the specified columns."""
     conn = sqlite3.connect('players.db')
     cursor = conn.cursor()
 
-    # Create the table with only the required columns
+    # Builds columns in the table
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS players (
         player_id TEXT PRIMARY KEY,
@@ -22,23 +23,22 @@ def create_database():
     conn.close()
 
 
+# Populates the created database
 def insert_data(json_file):
-    """Insert data from JSON file into the database with placeholder values for missing columns."""
     conn = sqlite3.connect('players.db')
     cursor = conn.cursor()
 
-    # Load JSON data
     with open(json_file, 'r') as f:
         data = json.load(f)
 
+    # Grabs information for each player, if information is not given 'NA' is put in place | -1 is put in place if age is not available
     for player_id, attributes in data.items():
-        # Extract only the required fields, with default values if missing
         first_name = attributes.get('first_name', 'NA')
         last_name = attributes.get('last_name', 'NA')
         age = attributes.get('age', -1)
         position = attributes.get('position', 'NA')
 
-        # Insert or replace into the database
+        # Populates database with information or placeholder values
         cursor.execute('''
         INSERT OR REPLACE INTO players (player_id, first_name, last_name, age, position)
         VALUES (?, ?, ?, ?, ?)
